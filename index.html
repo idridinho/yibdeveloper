@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y.I.B_Developer — Votre vision, notre développement !</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+ 
+  <!-- BG -->
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+ 
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.png" alt="Y.I.B_Developer" onerror="this.style.display='none'"/>
+      <span>Y.I.B<em>_Developer</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#process">Processus</a></li>
+      <li><a href="#technologies">Technologies</a></li>
+      <li><a href="#portfolio">Projets</a></li>
+      <li><a href="#contact" class="nav-cta">Démarrer un projet</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+ 
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#about" onclick="toggleMenu()">À propos</a>
+    <a href="#process" onclick="toggleMenu()">Processus</a>
+    <a href="#technologies" onclick="toggleMenu()">Technologies</a>
+    <a href="#portfolio" onclick="toggleMenu()">Projets</a>
+    <a href="#contact" class="cta" onclick="toggleMenu()">Démarrer un projet →</a>
+  </div>
+ 
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-badge">🚀 Disponible pour de nouveaux projets</div>
+    <h1>
+      Solutions digitales<br>
+      <span class="line2">sur mesure & innovantes</span>
+    </h1>
+    <p class="hero-slogan">"<strong>Votre vision</strong>, notre développement !"</p>
+    <p class="hero-desc">
+      Y.I.B_Developer conçoit et développe vos sites web et applications mobiles avec expertise, créativité et rigueur — pour donner vie à chacune de vos idées numériques.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Démarrer votre projet →</a>
+      <a href="#services" class="btn-outline">Découvrir nos services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Projets réalisés</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Satisfaction client</div></div>
+      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Ans d'expérience</div></div>
+      <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Support réactif</div></div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+ 
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">🛠 Nos services</span>
+        <h2 class="section-title">Ce que nous créons<br>pour vous</h2>
+      </div>
+      <p class="section-sub">
+        Des solutions digitales complètes, pensées pour répondre exactement à vos besoins métiers et améliorer votre présence en ligne.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card featured reveal" style="--accent: var(--blue-light)">
+        <div class="service-icon icon-blue">🌐</div>
+        <h3>Développement Web</h3>
+        <p>Création de sites vitrines, e-commerce, plateformes SaaS et applications web performantes, responsive et optimisées SEO. Du simple site institutionnel à la plateforme complexe, nous développons avec les meilleures technologies modernes.</p>
+        <div class="service-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vue.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">WordPress</span>
+          <span class="tag green">SEO Ready</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="--accent: var(--green)">
+        <div class="service-icon icon-green">📱</div>
+        <h3>Applications Mobiles</h3>
+        <p>Développement d'applications iOS et Android cross-platform, intuitives et performantes, adaptées à vos utilisateurs finaux.</p>
+        <div class="service-tags">
+          <span class="tag">React Native</span>
+          <span class="tag">Flutter</span>
+          <span class="tag green">iOS & Android</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="--accent: #a855f7">
+        <div class="service-icon icon-purple">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Conception d'interfaces modernes et de parcours utilisateurs fluides qui convertissent et fidélisent vos visiteurs.</p>
+        <div class="service-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Prototypage</span>
+          <span class="tag green">Design System</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="--accent: #fb923c">
+        <div class="service-icon icon-orange">🛒</div>
+        <h3>E-Commerce</h3>
+        <p>Boutiques en ligne complètes avec gestion des produits, paiements sécurisés et tableaux de bord analytiques.</p>
+        <div class="service-tags">
+          <span class="tag">WooCommerce</span>
+          <span class="tag">Shopify</span>
+          <span class="tag green">Paiement sécurisé</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="--accent: #22d3ee">
+        <div class="service-icon icon-cyan">⚙️</div>
+        <h3>APIs & Back-end</h3>
+        <p>Architecture serveur robuste, APIs RESTful, bases de données et intégrations tierces pour vos applications.</p>
+        <div class="service-tags">
+          <span class="tag">REST API</span>
+          <span class="tag">GraphQL</span>
+          <span class="tag green">Cloud</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="--accent: #ec4899">
+        <div class="service-icon icon-pink">🔧</div>
+        <h3>Maintenance & Support</h3>
+        <p>Suivi, mises à jour, optimisation des performances et support technique continu pour vos solutions existantes.</p>
+        <div class="service-tags">
+          <span class="tag">Monitoring</span>
+          <span class="tag">Optimisation</span>
+          <span class="tag green">Support 24/7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-card-main">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem">
+            <div class="about-avatar">YI</div>
+            <div>
+              <h3>YEPMO Idris</h3>
+              <div class="role">Développeur Web & Mobile · Fondateur</div>
+            </div>
+          </div>
+          <p>Passionné par le code et les nouvelles technologies, je crée des solutions digitales sur mesure qui transforment les idées en produits concrets, performants et évolutifs. Chaque projet est une opportunité d'innover.</p>
+          <div class="service-tags" style="margin-top:1.2rem">
+            <span class="tag">Full-Stack</span>
+            <span class="tag green">Mobile Dev</span>
+            <span class="tag">Entrepreneur</span>
+          </div>
+        </div>
+        <div class="skills-float">
+          <div class="skills-float-label">Stack technique</div>
+          <div class="skills-list">
+            <span class="skill-chip">JS</span>
+            <span class="skill-chip">React</span>
+            <span class="skill-chip">Flutter</span>
+            <span class="skill-chip">Node</span>
+            <span class="skill-chip">PHP</span>
+            <span class="skill-chip">MySQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="section-label">👤 À propos</span>
+        <h2 class="section-title">Y.I.B_Developer,<br>votre partenaire digital</h2>
+        <p class="section-sub">Une structure dédiée à accompagner particuliers et entreprises dans leur transformation numérique, avec expertise et passion.</p>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-dot">🎯</div>
+            <div>
+              <h4>Solutions sur mesure</h4>
+              <p>Chaque projet est unique. Nous développons des solutions 100% personnalisées, adaptées à vos objectifs et à votre secteur d'activité.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot">⚡</div>
+            <div>
+              <h4>Performance & qualité</h4>
+              <p>Nos développements respectent les meilleures pratiques : code propre, performances optimales, sécurité renforcée.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot">🤝</div>
+            <div>
+              <h4>Accompagnement continu</h4>
+              <p>Nous vous accompagnons de la conception au déploiement, avec un suivi post-lancement et un support réactif.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot">💡</div>
+            <div>
+              <h4>Conseil stratégique</h4>
+              <p>Au-delà du développement, nous vous conseillons sur les meilleures stratégies digitales pour atteindre vos objectifs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="process-header reveal">
+      <span class="section-label">🔄 Notre méthode</span>
+      <h2 class="section-title">Comment nous travaillons</h2>
+      <p class="section-sub">Un processus clair, transparent et collaboratif pour garantir la réussite de votre projet digital.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <h4>Découverte</h4>
+        <p>Échange approfondi pour comprendre vos besoins, votre cible et vos objectifs métiers.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">02</div>
+        <h4>Conception</h4>
+        <p>Maquettes, architecture technique et validation du design avant toute ligne de code.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">03</div>
+        <h4>Développement</h4>
+        <p>Développement agile avec points d'avancement réguliers et livraisons intermédiaires.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">04</div>
+        <h4>Lancement</h4>
+        <p>Tests rigoureux, déploiement sécurisé et formation pour une prise en main optimale.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- TECHNOLOGIES -->
+  <section id="technologies">
+    <div class="tech-header reveal">
+      <span class="section-label">⚙️ Technologies</span>
+      <h2 class="section-title">Notre stack technologique</h2>
+      <p class="section-sub" style="margin:auto">Les outils et frameworks les plus performants du marché pour vos projets.</p>
+    </div>
+    <div class="tech-marquee-wrapper reveal">
+      <div class="tech-marquee" id="techMarquee">
+        <div class="tech-pill"><span>⚛️</span> React.js</div>
+        <div class="tech-pill"><span>💚</span> Vue.js</div>
+        <div class="tech-pill"><span>🔵</span> Flutter</div>
+        <div class="tech-pill"><span>🟡</span> JavaScript</div>
+        <div class="tech-pill"><span>🔷</span> TypeScript</div>
+        <div class="tech-pill"><span>🟢</span> Node.js</div>
+        <div class="tech-pill"><span>🐘</span> PHP / Laravel</div>
+        <div class="tech-pill"><span>🗄️</span> MySQL</div>
+        <div class="tech-pill"><span>🌿</span> MongoDB</div>
+        <div class="tech-pill"><span>🔥</span> Firebase</div>
+        <div class="tech-pill"><span>☁️</span> AWS / Vercel</div>
+        <div class="tech-pill"><span>🐳</span> Docker</div>
+        <div class="tech-pill"><span>🎨</span> Figma</div>
+        <div class="tech-pill"><span>🌐</span> WordPress</div>
+        <div class="tech-pill"><span>🛒</span> WooCommerce</div>
+        <!-- Duplicate for loop -->
+        <div class="tech-pill"><span>⚛️</span> React.js</div>
+        <div class="tech-pill"><span>💚</span> Vue.js</div>
+        <div class="tech-pill"><span>🔵</span> Flutter</div>
+        <div class="tech-pill"><span>🟡</span> JavaScript</div>
+        <div class="tech-pill"><span>🔷</span> TypeScript</div>
+        <div class="tech-pill"><span>🟢</span> Node.js</div>
+        <div class="tech-pill"><span>🐘</span> PHP / Laravel</div>
+        <div class="tech-pill"><span>🗄️</span> MySQL</div>
+        <div class="tech-pill"><span>🌿</span> MongoDB</div>
+        <div class="tech-pill"><span>🔥</span> Firebase</div>
+        <div class="tech-pill"><span>☁️</span> AWS / Vercel</div>
+        <div class="tech-pill"><span>🐳</span> Docker</div>
+        <div class="tech-pill"><span>🎨</span> Figma</div>
+        <div class="tech-pill"><span>🌐</span> WordPress</div>
+        <div class="tech-pill"><span>🛒</span> WooCommerce</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="portfolio-header reveal">
+      <div>
+        <span class="section-label">💼 Portfolio</span>
+        <h2 class="section-title">Projets réalisés</h2>
+        <p class="section-sub">Un aperçu de quelques réalisations pour nos clients.</p>
+      </div>
+    </div>
+    <div class="portfolio-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb thumb-blue">🛍️</div>
+        <div class="project-body">
+          <div class="project-type">E-Commerce</div>
+          <h3>Boutique Mode Africaine</h3>
+          <p>Plateforme e-commerce complète avec paiement mobile money intégré et gestion des stocks en temps réel.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb thumb-green">📱</div>
+        <div class="project-body">
+          <div class="project-type">Application Mobile</div>
+          <h3>App de Livraison Locale</h3>
+          <p>Application de mise en relation entre commerces locaux et clients, avec suivi GPS en temps réel.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb thumb-purple">🏥</div>
+        <div class="project-body">
+          <div class="project-type">Plateforme Web</div>
+          <h3>Portail Médical</h3>
+          <p>Système de prise de rendez-vous en ligne pour une clinique, avec dossiers patients sécurisés.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb thumb-orange">🍕</div>
+        <div class="project-body">
+          <div class="project-type">Application Mobile</div>
+          <h3>Food Delivery App</h3>
+          <p>Application mobile de commande de repas avec interface restaurant et suivi des commandes.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb thumb-cyan">🏢</div>
+        <div class="project-body">
+          <div class="project-type">Site Vitrine</div>
+          <h3>Site Corporate PME</h3>
+          <p>Site institutionnel moderne et performant pour une entreprise locale, avec SEO optimisé.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb thumb-pink">📊</div>
+        <div class="project-body">
+          <div class="project-type">Dashboard</div>
+          <h3>Tableau de Bord Analytics</h3>
+          <p>Interface d'analyse de données commerciales avec visualisations et rapports automatisés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACT / CTA -->
+  <section id="contact">
+    <div class="cta-box reveal">
+      <h2>Prêt à lancer<br>votre projet ?</h2>
+      <p>Décrivez-nous votre idée, nous la transformons en réalité numérique.<br>Premier échange gratuit, sans engagement.</p>
+      <div class="contact-methods">
+        <a href="https://wa.me/+24166278006" class="contact-btn whatsapp" target="_blank">
+          💬 WhatsApp
+        </a>
+        <a href="yepmoidridinho@gmail.com" class="contact-btn email">
+          ✉️ Envoyer un email
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="/mnt/user-data/uploads/logo.png" alt="Y.I.B_Developer" onerror="this.style.display='none'"/>
+      <span>Y.I.B<em>_Developer</em></span>
+    </div>
+    <p>© 2025 Y.I.B_Developer · <em>"Votre vision, notre développement !"</em></p>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
