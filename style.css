@@ -19,15 +19,23 @@
  
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
  
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth;
+           overflow-x: hidden;
+           width: 100%;
+    }
  
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
       color: var(--text);
       overflow-x: hidden;
-      min-height: 100vh;
+      min-height: 320px;
       max-width: 100%;
+    }
+
+    img, video, iframe {
+      max-width: 100%;
+      height: auto;
     }
  
     /* ─── NOISE TEXTURE OVERLAY ─── */
@@ -55,7 +63,7 @@
     }
     .orb1 { width: 280px; height: 280px; background: var(--blue); top: -120px; left: -60px; animation-delay: 0s; }
     .orb2 { width: 220px; height: 220px; background: var(--green); bottom: -80px; right: -40px; animation-delay: -4s; }
-    .orb3 { width: 180px; height: 180px; background: var(--blue-light); top: 40%; left: 55%; animation-delay: -8s; }
+    .orb3 { width: 180px; height: 180px; background: var(--blue-light); top: 40%; animation-delay: -8s; }
     @keyframes orbFloat {
       0%, 100% { transform: translate(0,0) scale(1); }
       33% { transform: translate(30px,-40px) scale(1.08); }
