@@ -19,27 +19,14 @@
  
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
  
-    html { scroll-behavior: smooth;
-           overflow-x: hidden;
-           width: 100%;
-    }
-    * {
-      max-width: 100%;
-    }
+    html { scroll-behavior: smooth; }
  
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
-      padding: 40px;
       color: var(--text);
       overflow-x: hidden;
-      min-height: 320px;
-      max-width: 100%;
-    }
-
-    img, video, iframe {
-      max-width: 100%;
-      height: auto;
+      min-height: 100vh;
     }
  
     /* ─── NOISE TEXTURE OVERLAY ─── */
@@ -56,7 +43,6 @@
     .bg-orbs {
       position: fixed; inset: 0; pointer-events: none; z-index: 0;
       overflow: hidden;
-      max-width: 100vw;
     }
     .orb {
       position: absolute;
@@ -65,9 +51,9 @@
       opacity: .18;
       animation: orbFloat 12s ease-in-out infinite;
     }
-    .orb1 { width: 280px; height: 280px; background: var(--blue); top: -120px; left: -60px; animation-delay: 0s; }
-    .orb2 { width: 220px; height: 220px; background: var(--green); bottom: -80px; right: -40px; animation-delay: -4s; }
-    .orb3 { width: 180px; height: 180px; background: var(--blue-light); top: 40%; animation-delay: -8s; }
+    .orb1 { width: 520px; height: 520px; background: var(--blue); top: -120px; left: -100px; animation-delay: 0s; }
+    .orb2 { width: 400px; height: 400px; background: var(--green); bottom: -80px; right: -80px; animation-delay: -4s; }
+    .orb3 { width: 300px; height: 300px; background: var(--blue-light); top: 40%; left: 55%; animation-delay: -8s; }
     @keyframes orbFloat {
       0%, 100% { transform: translate(0,0) scale(1); }
       33% { transform: translate(30px,-40px) scale(1.08); }
@@ -91,7 +77,6 @@
     .nav-logo {
       display: flex; align-items: center; gap: 10px;
       text-decoration: none;
-      
     }
     .nav-logo img { height: 44px; width: auto; }
     .nav-logo span {
@@ -863,7 +848,4 @@
       .cta-box { padding: 2.5rem 1.5rem; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
-    }
-    #pdg{
-      border-radius: 50%;
     }
