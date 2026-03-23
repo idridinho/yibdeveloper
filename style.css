@@ -23,10 +23,14 @@
            overflow-x: hidden;
            width: 100%;
     }
+    * {
+      max-width: 100%;
+    }
  
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--bg);
+      padding: 40px;
       color: var(--text);
       overflow-x: hidden;
       min-height: 320px;
@@ -87,6 +91,7 @@
     .nav-logo {
       display: flex; align-items: center; gap: 10px;
       text-decoration: none;
+      
     }
     .nav-logo img { height: 44px; width: auto; }
     .nav-logo span {
@@ -858,4 +863,7 @@
       .cta-box { padding: 2.5rem 1.5rem; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
+    }
+    #pdg{
+      border-radius: 50%;
     }
