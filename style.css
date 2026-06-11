@@ -564,6 +564,20 @@
     .foot-links a { color: var(--muted); text-decoration: none; font-size: .82rem; transition: color .2s; }
     .foot-links a:hover { color: var(--text); }
  
+    /* Lien politique de confidentialité dans le footer */
+    .foot-policy {
+      position: relative;
+    }
+    .foot-policy::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 100%;
+      height: 1px;
+      background: var(--green);
+      transition: right .25s var(--ease);
+    }
+    .foot-policy:hover::after { right: 0; }
+ 
     /* ══════════════════════════════════
        ANIMATIONS
     ══════════════════════════════════ */
@@ -578,6 +592,187 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
  
     /* ══════════════════════════════════
+       SERVIGO AFRICA — CARTE PORTFOLIO
+    ══════════════════════════════════ */
+ 
+    /* Span 2 colonnes sur la grille */
+    .sg-card {
+      grid-column: span 2;
+    }
+ 
+    /* Layout horizontal : visuel gauche + contenu droite */
+    .sg-layout {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+ 
+    /* Panneau gauche navy/gold */
+    .proj-thumb.ts {
+      width: 200px;
+      min-width: 200px;
+      height: auto;
+      min-height: 210px;
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, #070f1c 0%, #0e2035 65%, rgba(244,180,0,.1) 100%);
+      border-right: 1px solid rgba(244,180,0,.15);
+      font-size: 2.8rem;
+    }
+ 
+    /* Mini mockup téléphone */
+    .sg-phone-mock {
+      width: 132px;
+      background: rgba(8,18,32,.96);
+      border: 1.5px solid rgba(244,180,0,.28);
+      border-radius: 14px;
+      padding: 9px 9px 8px;
+      box-shadow:
+        0 0 0 1px rgba(244,180,0,.06),
+        0 10px 30px rgba(0,0,0,.6),
+        0 0 22px rgba(244,180,0,.07);
+    }
+ 
+    .sg-mock-bar {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+ 
+    .sg-mock-dot {
+      width: 7px;
+      height: 7px;
+      background: #F4B400;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+ 
+    .sg-mock-title {
+      font-size: 9px;
+      font-weight: 700;
+      color: #F4B400;
+      letter-spacing: .06em;
+      font-family: 'Syne', sans-serif;
+    }
+ 
+    .sg-mock-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(244,180,0,.05);
+      border: 1px solid rgba(244,180,0,.1);
+      border-radius: 6px;
+      padding: 5px 6px;
+      margin-bottom: 4px;
+    }
+ 
+    .sg-mock-ico {
+      font-size: 11px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+ 
+    .sg-mock-txt {
+      font-size: 7.5px;
+      color: rgba(232,237,255,.7);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: 'DM Sans', sans-serif;
+    }
+ 
+    .sg-mock-footer {
+      text-align: center;
+      font-size: 7px;
+      font-weight: 600;
+      color: #F4B400;
+      background: rgba(244,180,0,.07);
+      border-radius: 4px;
+      padding: 4px;
+      margin-top: 5px;
+      letter-spacing: .04em;
+      font-family: 'Syne', sans-serif;
+    }
+ 
+    /* Badge "Nouveau" */
+    .proj-new {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(244,180,0,.12);
+      border: 1px solid rgba(244,180,0,.32);
+      color: #F4B400;
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .18rem .52rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+ 
+    /* Accent or sur "Africa" dans le titre */
+    .sg-name-accent {
+      background: linear-gradient(90deg, #F4B400, #e0a400);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+ 
+    /* Tags techno dans la carte projet */
+    .proj-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .32rem;
+      margin-top: .9rem;
+    }
+ 
+    /* Boutons d'action */
+    .sg-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1.1rem;
+    }
+ 
+    .proj-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .46rem 1rem;
+      background: linear-gradient(135deg, rgba(26,79,214,.16), rgba(59,114,245,.09));
+      border: 1px solid rgba(59,114,245,.3);
+      color: var(--blue-light);
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, border-color .2s, transform .2s;
+      white-space: nowrap;
+    }
+    .proj-store-btn:hover {
+      background: linear-gradient(135deg, rgba(26,79,214,.3), rgba(59,114,245,.18));
+      border-color: rgba(59,114,245,.55);
+      transform: translateY(-2px);
+    }
+ 
+    .proj-policy-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      font-size: .76rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .2s;
+      white-space: nowrap;
+    }
+    .proj-policy-link:hover { color: var(--text); }
+ 
+    /* ══════════════════════════════════
        RESPONSIVE — TABLETTE
     ══════════════════════════════════ */
     @media (max-width: 900px) {
@@ -589,6 +784,16 @@
       .steps { grid-template-columns: repeat(2,1fr); }
       .steps::before { display: none; }
       .proj-grid { grid-template-columns: repeat(2,1fr); }
+ 
+      /* ServiGO sur tablette : 1 colonne, layout vertical */
+      .sg-card { grid-column: span 1; }
+      .sg-layout { flex-direction: column; }
+      .proj-thumb.ts {
+        width: 100%;
+        min-height: 150px;
+        border-right: none;
+        border-bottom: 1px solid rgba(244,180,0,.15);
+      }
     }
  
     /* ══════════════════════════════════
@@ -628,6 +833,11 @@
  
       /* Portfolio */
       .proj-grid { grid-template-columns: 1fr; }
+      .sg-card { grid-column: span 1; }
+ 
+      /* ServiGO actions sur mobile */
+      .sg-actions { flex-direction: column; align-items: flex-start; }
+      .proj-store-btn { width: 100%; justify-content: center; }
  
       /* Contact */
       .cta-box { padding: 2rem 1.2rem; border-radius: 16px; }

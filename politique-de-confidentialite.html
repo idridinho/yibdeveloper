@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de Confidentialité — ServiGO Africa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:   #0D1B2A;
+      --navy2:  #122337;
+      --gold:   #F4B400;
+      --gold2:  #e0a400;
+      --white:  #FFFFFF;
+      --gray:   #94a3b8;
+      --light:  #f1f5f9;
+      --border: rgba(244,180,0,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ─── Header ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,27,42,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text span:last-child {
+      font-size: 10px;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .header-badge {
+      background: rgba(244,180,0,0.12);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── Hero Banner ─── */
+    .policy-hero {
+      background: linear-gradient(135deg, #0D1B2A 0%, #122a3f 50%, #0D1B2A 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .policy-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(244,180,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .policy-hero .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,180,0,0.1);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .policy-hero h1 {
+      font-size: clamp(26px, 5vw, 42px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .policy-hero h1 span { color: var(--gold); }
+
+    .policy-hero p {
+      color: var(--gray);
+      font-size: 14px;
+      max-width: 520px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .meta-item .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* ─── Layout ─── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ─── TOC ─── */
+    .toc {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+
+    .toc-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    .toc ol li a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .toc ol li a:hover { color: var(--gold); }
+
+    @media (max-width: 560px) { .toc ol { grid-template-columns: 1fr; } }
+
+    /* ─── Sections ─── */
+    .policy-section {
+      margin-bottom: 52px;
+    }
+
+    .section-anchor { display: block; margin-top: -80px; padding-top: 80px; }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .section-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: rgba(244,180,0,0.12);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 3px;
+    }
+
+    .section-title {
+      font-size: clamp(17px, 3vw, 21px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.25;
+    }
+
+    .section-title span { color: var(--gold); }
+
+    .policy-section p,
+    .policy-section li {
+      color: #b8c8d8;
+      font-size: 14.5px;
+      line-height: 1.8;
+    }
+
+    .policy-section p + p { margin-top: 12px; }
+
+    .policy-section ul,
+    .policy-section ol {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .policy-section li { margin-bottom: 6px; }
+
+    .policy-section li::marker { color: var(--gold); }
+
+    /* ─── Cards ─── */
+    .info-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .info-card strong {
+      display: block;
+      color: var(--gold);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    /* ─── Data table ─── */
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    @media (max-width: 540px) { .data-grid { grid-template-columns: 1fr; } }
+
+    .data-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .data-card .dc-icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .data-card .dc-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 4px;
+    }
+
+    .data-card p {
+      font-size: 13px !important;
+      color: var(--gray) !important;
+      line-height: 1.6 !important;
+    }
+
+    /* ─── Highlight box ─── */
+    .highlight-box {
+      background: rgba(244,180,0,0.05);
+      border: 1px solid rgba(244,180,0,0.25);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      color: #d4c078 !important;
+      font-size: 13.5px !important;
+    }
+
+    .highlight-box::before {
+      content: '⚡ ';
+    }
+
+    /* ─── Divider ─── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      text-decoration: none;
+    }
+
+    .footer-logo .icon {
+      width: 32px; height: 32px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+
+    .footer-logo span {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--gray);
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .back-btn:hover { border-color: var(--gold); color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Header ─── -->
+  <header>
+    <a href="https://yibdeveloper.vercel.app" class="logo-wrap">
+      <div class="logo-icon">🌍</div>
+      <div class="logo-text">
+        <span>ServiGO Africa</span>
+        <span>by Y.I.B_Developer</span>
+      </div>
+    </a>
+    <span class="header-badge">Politique de confidentialité</span>
+  </header>
+
+  <!-- ─── Hero ─── -->
+  <section class="policy-hero">
+    <div class="eyebrow">🔒 Vie privée &amp; protection des données</div>
+    <h1>Politique de <span>Confidentialité</span></h1>
+    <p>Nous prenons la protection de vos données personnelles très au sérieux. Cette politique vous explique comment ServiGO Africa collecte, utilise et protège vos informations.</p>
+    <div class="meta-row">
+      <div class="meta-item"><span class="dot"></span>Application mobile ServiGO Africa</div>
+      <div class="meta-item"><span class="dot"></span>Dernière mise à jour : Juin 2025</div>
+      <div class="meta-item"><span class="dot"></span>Applicable : Cameroun &amp; Gabon</div>
+    </div>
+  </section>
+
+  <!-- ─── Main content ─── -->
+  <div class="page-wrap">
+
+    <!-- Table of contents -->
+    <div class="toc">
+      <div class="toc-title">📋 Sommaire</div>
+      <ol>
+        <li><a href="#s1">Qui sommes-nous ?</a></li>
+        <li><a href="#s2">Données collectées</a></li>
+        <li><a href="#s3">Utilisation des données</a></li>
+        <li><a href="#s4">Partage des données</a></li>
+        <li><a href="#s5">Services tiers</a></li>
+        <li><a href="#s6">Sécurité</a></li>
+        <li><a href="#s7">Conservation des données</a></li>
+        <li><a href="#s8">Vos droits</a></li>
+        <li><a href="#s9">Mineurs</a></li>
+        <li><a href="#s10">Modifications</a></li>
+        <li><a href="#s11">Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. Qui sommes-nous -->
+    <div id="s1" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <h2 class="section-title">Qui sommes-<span>nous</span> ?</h2>
+      </div>
+      <p><strong style="color:#fff">ServiGO Africa</strong> est une application mobile de mise en relation entre prestataires de services (artisans, techniciens, professionnels) et clients particuliers ou entreprises, opérée au Cameroun et au Gabon.</p>
+      <div class="info-card">
+        <strong>Responsable du traitement</strong>
+        <p>Y.I.B_Developer — Idris Bitoumbou</p>
+        <p>Contact : <a href="mailto:yibdeveloper@gmail.com" style="color:var(--gold)">yibdeveloper@gmail.com</a></p>
+        <p>Site web : <a href="https://yibdeveloper.vercel.app" style="color:var(--gold)" target="_blank">yibdeveloper.vercel.app</a></p>
+        <p>WhatsApp : disponible via l'application</p>
+      </div>
+      <p>En utilisant ServiGO Africa, vous acceptez les termes de cette politique de confidentialité. Si vous n'êtes pas d'accord avec ces conditions, veuillez ne pas utiliser l'application.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 2. Données collectées -->
+    <div id="s2" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">02</div>
+        <h2 class="section-title">Données <span>collectées</span></h2>
+      </div>
+      <p>ServiGO Africa collecte uniquement les données nécessaires au bon fonctionnement du service. Ces données sont réparties en plusieurs catégories :</p>
+
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="dc-icon">👤</div>
+          <div class="dc-label">Données d'identité</div>
+          <p>Nom complet, numéro de téléphone, adresse e-mail, photo de profil.</p>
+        </div>
+        <div class="data-card">
+          <div class="dc-icon">🔧</div>
+          <div class="dc-label">Profil artisan</div>
+          <p>Métier, spécialités, quartier d'intervention, documents de vérification (pièce d'identité, diplôme, attestations).</p>
+        </div>
+        <div class="data-card">
+          <div class="dc-icon">📍</div>
+          <div class="dc-label">Localisation</div>
+          <p>Quartier / zone géographique renseigné manuellement par l'utilisateur pour faciliter la mise en relation locale.</p>
+        </div>
+        <div class="data-card">
+          <div class="dc-icon">📸</div>
+          <div class="dc-label">Contenus publiés</div>
+          <p>Photos et textes des publications partagées dans le fil d'actualité de l'application.</p>
+        </div>
+        <div class="data-card">
+          <div class="dc-icon">⭐</div>
+          <div class="dc-label">Avis et évaluations</div>
+          <p>Notes attribuées aux artisans (1 à 5 étoiles) et commentaires soumis par les clients.</p>
+        </div>
+        <div class="data-card">
+          <div class="dc-icon">📱</div>
+          <div class="dc-label">Données techniques</div>
+          <p>Identifiant de l'appareil, version de l'application, système d'exploitation (à des fins de débogage).</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        Nous ne collectons <strong>aucune donnée de paiement</strong>. Les transactions éventuelles s'effectuent directement entre les utilisateurs.
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 3. Utilisation des données -->
+    <div id="s3" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">03</div>
+        <h2 class="section-title">Utilisation des <span>données</span></h2>
+      </div>
+      <p>Les données collectées sont utilisées exclusivement pour les finalités suivantes :</p>
+      <ul>
+        <li>Créer et gérer votre compte utilisateur (client ou artisan)</li>
+        <li>Afficher les profils d'artisans et faciliter la mise en relation</li>
+        <li>Permettre aux artisans de publier du contenu (publications, photos)</li>
+        <li>Afficher et calculer les avis et notes des artisans</li>
+        <li>Vérifier l'identité et les credentials des artisans avant validation</li>
+        <li>Envoyer des notifications liées à votre activité sur l'application</li>
+        <li>Améliorer les fonctionnalités et corriger les bugs de l'application</li>
+        <li>Assurer la sécurité et prévenir les abus sur la plateforme</li>
+      </ul>
+      <p>Nous n'utilisons pas vos données à des fins publicitaires, de profilage commercial ou de revente à des tiers.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 4. Partage des données -->
+    <div id="s4" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">04</div>
+        <h2 class="section-title">Partage des <span>données</span></h2>
+      </div>
+      <p>ServiGO Africa ne vend, ne loue et ne cède jamais vos données personnelles à des tiers à des fins commerciales. Les données peuvent être partagées uniquement dans les cas suivants :</p>
+      <ul>
+        <li><strong style="color:#fff">Entre utilisateurs de la plateforme :</strong> les informations de profil des artisans (nom, photo, métier, quartier, note) sont visibles par les clients recherchant un prestataire. Votre numéro WhatsApp professionnel n'est partagé que si vous avez activé cette option.</li>
+        <li><strong style="color:#fff">Prestataires techniques :</strong> nous faisons appel à des services tiers de confiance (voir section 5) pour héberger et traiter certaines données dans le cadre strict du fonctionnement de l'application.</li>
+        <li><strong style="color:#fff">Obligations légales :</strong> si la loi l'exige ou dans le cadre d'une procédure judiciaire, nous pouvons être tenus de divulguer certaines informations aux autorités compétentes.</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 5. Services tiers -->
+    <div id="s5" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">05</div>
+        <h2 class="section-title">Services <span>tiers</span></h2>
+      </div>
+      <p>ServiGO Africa utilise les services tiers suivants, chacun soumis à sa propre politique de confidentialité :</p>
+
+      <div class="info-card">
+        <strong>🔥 Google Firebase (Alphabet Inc.)</strong>
+        <p>Authentification des utilisateurs, base de données en temps réel (Firestore), stockage de fichiers et notifications push. Les données sont hébergées sur l'infrastructure sécurisée de Google.</p>
+        <p style="margin-top:6px;font-size:13px;color:var(--gray)">→ <a href="https://firebase.google.com/support/privacy" target="_blank" style="color:var(--gold)">firebase.google.com/support/privacy</a></p>
+      </div>
+
+      <div class="info-card">
+        <strong>☁️ Cloudinary</strong>
+        <p>Hébergement et optimisation des images téléchargées sur la plateforme (photos de profil, documents de vérification, photos de publications). Les images sont stockées de manière sécurisée dans le cloud.</p>
+        <p style="margin-top:6px;font-size:13px;color:var(--gray)">→ <a href="https://cloudinary.com/privacy" target="_blank" style="color:var(--gold)">cloudinary.com/privacy</a></p>
+      </div>
+
+      <div class="info-card">
+        <strong>💬 WhatsApp (Meta Platforms Inc.)</strong>
+        <p>Lorsqu'un client contacte un artisan via le bouton WhatsApp, l'application ouvre WhatsApp avec le numéro préenregistré de l'artisan. Cette communication se déroule en dehors de notre plateforme et est soumise aux conditions de Meta.</p>
+        <p style="margin-top:6px;font-size:13px;color:var(--gray)">→ <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" style="color:var(--gold)">whatsapp.com/legal/privacy-policy</a></p>
+      </div>
+
+      <div class="info-card">
+        <strong>🛒 Google Play Store (Alphabet Inc.)</strong>
+        <p>Plateforme de distribution de l'application. Google peut collecter des données analytiques liées au téléchargement et à l'utilisation de l'application, conformément à sa politique de confidentialité.</p>
+        <p style="margin-top:6px;font-size:13px;color:var(--gray)">→ <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--gold)">policies.google.com/privacy</a></p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 6. Sécurité -->
+    <div id="s6" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">06</div>
+        <h2 class="section-title">Sécurité des <span>données</span></h2>
+      </div>
+      <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, toute perte ou toute divulgation accidentelle :</p>
+      <ul>
+        <li>Authentification sécurisée via Firebase Authentication (email/mot de passe)</li>
+        <li>Règles de sécurité Firestore limitant l'accès aux données aux seuls utilisateurs autorisés</li>
+        <li>Transmission des données chiffrée via HTTPS/TLS</li>
+        <li>Les documents de vérification des artisans sont stockés de manière sécurisée et accessibles uniquement aux administrateurs</li>
+        <li>Mises à jour régulières de l'application pour corriger les vulnérabilités</li>
+      </ul>
+      <div class="highlight-box">
+        Malgré nos efforts, aucune méthode de transmission sur Internet ni de stockage électronique n'est 100 % sécurisée. En cas d'incident de sécurité affectant vos données, nous vous en informerons dans les meilleurs délais.
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 7. Conservation -->
+    <div id="s7" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">07</div>
+        <h2 class="section-title">Conservation des <span>données</span></h2>
+      </div>
+      <p>Nous conservons vos données personnelles aussi longtemps que nécessaire pour les finalités décrites dans cette politique :</p>
+      <ul>
+        <li><strong style="color:#fff">Données de compte :</strong> conservées tant que votre compte est actif. En cas de suppression de compte, vos données sont supprimées dans un délai de 30 jours.</li>
+        <li><strong style="color:#fff">Publications et contenus :</strong> conservés jusqu'à suppression manuelle par l'utilisateur ou suppression du compte.</li>
+        <li><strong style="color:#fff">Documents de vérification :</strong> conservés le temps nécessaire à la vérification, puis supprimés ou archivés de manière sécurisée.</li>
+        <li><strong style="color:#fff">Données techniques (logs) :</strong> conservées pour une durée maximale de 90 jours à des fins de débogage.</li>
+      </ul>
+      <p>Pour demander la suppression de votre compte et de vos données, contactez-nous à l'adresse indiquée en section 11.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 8. Vos droits -->
+    <div id="s8" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">08</div>
+        <h2 class="section-title">Vos <span>droits</span></h2>
+      </div>
+      <p>Conformément aux réglementations applicables, vous disposez des droits suivants concernant vos données personnelles :</p>
+      <ul>
+        <li><strong style="color:#fff">Droit d'accès :</strong> vous pouvez demander une copie des données que nous détenons vous concernant.</li>
+        <li><strong style="color:#fff">Droit de rectification :</strong> vous pouvez corriger ou mettre à jour vos informations directement depuis l'application ou en nous contactant.</li>
+        <li><strong style="color:#fff">Droit à l'effacement :</strong> vous pouvez demander la suppression de votre compte et de vos données personnelles.</li>
+        <li><strong style="color:#fff">Droit d'opposition :</strong> vous pouvez vous opposer au traitement de vos données pour certaines finalités.</li>
+        <li><strong style="color:#fff">Droit à la portabilité :</strong> vous pouvez demander à recevoir vos données dans un format structuré et lisible.</li>
+        <li><strong style="color:#fff">Droit de retirer le consentement :</strong> vous pouvez retirer votre consentement à tout moment, sans que cela n'affecte la licéité des traitements passés.</li>
+      </ul>
+      <p>Pour exercer l'un de ces droits, contactez-nous par e-mail à <a href="mailto:yibdeveloper@gmail.com" style="color:var(--gold)">yibdeveloper@gmail.com</a>. Nous répondrons dans un délai de 30 jours ouvrables.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 9. Mineurs -->
+    <div id="s9" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">09</div>
+        <h2 class="section-title">Protection des <span>mineurs</span></h2>
+      </div>
+      <p>ServiGO Africa est une application destinée aux personnes âgées de <strong style="color:#fff">18 ans et plus</strong>. Nous ne collectons pas sciemment de données personnelles concernant des mineurs.</p>
+      <p>Si vous êtes parent ou tuteur légal et que vous pensez que votre enfant mineur nous a fourni des données personnelles, contactez-nous immédiatement afin que nous procédions à leur suppression.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 10. Modifications -->
+    <div id="s10" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">10</div>
+        <h2 class="section-title">Modifications de cette <span>politique</span></h2>
+      </div>
+      <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment pour refléter des changements dans nos pratiques ou dans la réglementation applicable. En cas de modification substantielle :</p>
+      <ul>
+        <li>Nous vous informerons via une notification dans l'application</li>
+        <li>La date de "dernière mise à jour" en haut de cette page sera modifiée</li>
+        <li>Pour les modifications majeures, nous pourrons demander votre consentement explicite</li>
+      </ul>
+      <p>Nous vous encourageons à consulter régulièrement cette page. La poursuite de l'utilisation de l'application après modification vaut acceptation de la nouvelle politique.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 11. Contact -->
+    <div id="s11" class="section-anchor"></div>
+    <section class="policy-section">
+      <div class="section-header">
+        <div class="section-num">11</div>
+        <h2 class="section-title">Nous <span>contacter</span></h2>
+      </div>
+      <p>Pour toute question, demande ou réclamation concernant cette politique de confidentialité ou le traitement de vos données personnelles, contactez-nous :</p>
+      <div class="info-card">
+        <strong>📧 E-mail</strong>
+        <p><a href="mailto:yibdeveloper@gmail.com" style="color:var(--gold)">yibdeveloper@gmail.com</a></p>
+      </div>
+      <div class="info-card">
+        <strong>🌐 Site web</strong>
+        <p><a href="https://yibdeveloper.vercel.app" style="color:var(--gold)" target="_blank">yibdeveloper.vercel.app</a></p>
+      </div>
+      <div class="info-card">
+        <strong>📍 Localisation</strong>
+        <p>Afrique Centrale — Cameroun &amp; Gabon</p>
+      </div>
+      <p style="margin-top: 18px;">Nous nous engageons à répondre à toutes vos demandes dans un délai raisonnable et à traiter vos préoccupations avec sérieux et diligence.</p>
+    </section>
+
+    <div style="text-align:center; margin-top: 32px;">
+      <a href="https://yibdeveloper.vercel.app" class="back-btn">← Retour au site Y.I.B_Developer</a>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <a href="https://yibdeveloper.vercel.app" class="footer-logo">
+      <div class="icon">🌍</div>
+      <span>ServiGO Africa</span>
+    </a>
+    <p>© 2025 ServiGO Africa — Développé par <a href="https://yibdeveloper.vercel.app">Y.I.B_Developer</a></p>
+    <p style="margin-top:6px;">Votre vision, notre développement !</p>
+  </footer>
+
+</body>
+</html>
